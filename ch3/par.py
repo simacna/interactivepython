@@ -63,7 +63,7 @@ def matches(inp):
   else:
     return False
 # print(matches([1,1,2,2]))
-print(matches('[()]'))
+# print(matches('[()]'))
 # print(matches('{{([][])}()}'))
 # print(matches('[{()]'))
 # print(matches('{{([][])}()}'))
@@ -72,7 +72,12 @@ print(matches('[()]'))
 # print(par('((()))'))
 # print(par('(()'))
 
+def matches(open,close):
+    opens = "([{"
+    closers = ")]}"
+    return opens.index(open) == closers.index(close)
 
+print(matches('[{()]', "{{([][])}()}"))
 
 
 

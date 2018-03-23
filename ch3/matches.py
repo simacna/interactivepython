@@ -1,16 +1,25 @@
-def matches(inp):
-  first_half = len(inp)//2
-  first_half_list = inp[0:first_half]
-  second_half_list = inp[first_half:]
-  weighted = True
-  index = 0
-  # s = Stack()
-  # if (len(inp)%2 = 0):
-  #   while index < len(inp):
-  #     if (inp[index] and )
-  if (first_half_list == second_half_list):
-    return True
-  else:
-    return False
-
-print(matches([1,2,1,2]))
+def parChecker(symbolString):
+    s = Stack()
+    balanced = True
+    index = 0
+    while index < len(symbolString) and balanced:
+        symbol = symbolString[index]
+        if symbol in "([{":
+            s.push(symbol)
+        else:
+            if s.isEmpty():
+                balanced = False
+            else:
+                top = s.pop()
+                if not matches(top,symbol):
+                       balanced = False
+        index = index + 1
+    if balanced and s.isEmpty():
+        return True
+    else:
+        return False
+        
+def matches(open,close):
+    opens = "([{"
+    closers = ")]}"
+    return opens.index(open) == closers.index(close)

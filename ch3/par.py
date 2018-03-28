@@ -20,6 +20,12 @@ class Stack:
      def lists(self):
          return self.items
 
+     def size(self):
+         return len(self.items)
+test = Stack()
+test.push([1])
+print(test.size())
+
 def par(pars):
     balanced = True
     s = Stack()
@@ -129,7 +135,7 @@ def matches(open,close):
     return opens.index(open) == closers.index(close)
 
 
-print(parChecker('{{([][])}()}'))
-print(parChecker('[{()]'))
+# print(parChecker('{{([][])}()}'))
+# print(parChecker('[{()]'))
 
 

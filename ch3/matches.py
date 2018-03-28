@@ -23,7 +23,7 @@ class Stack:
      def size(self):
          return len(self.items)
 
-# [{{([][])}()}]
+# {{([][])}()}
 
 def parChecker(symbolString):
     s = Stack()
@@ -31,15 +31,19 @@ def parChecker(symbolString):
     index = 0
     while index < len(symbolString) and balanced:
         symbol = symbolString[index]
+        # print('symbol', symbol)
+        # print("symbol index", symbolString.index(symbol))
         if symbol in "([{":
             s.push(symbol)
         else:
+            # print(s.lists())
             if s.isEmpty(): #don't understand purpose
                  balanced = False #how can index < len and not be empty
             else:
                 top = s.pop()
-                print('top', top)
+                # print('top', top)
                 print('bottom', symbol)
+                # how does symbol return end lists
                 if not matches(top,symbol):
                        balanced = False
         index = index + 1

@@ -24,7 +24,7 @@ class Stack:
          return len(self.items)
 test = Stack()
 test.push([1])
-print(test.size())
+# print(test.size())
 
 def par(pars):
     balanced = True

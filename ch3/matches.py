@@ -31,7 +31,7 @@ def parChecker(symbolString):
     index = 0
     while index < len(symbolString) and balanced:
         symbol = symbolString[index]
-        # print('symbol', symbol)
+        print('symbol', symbol)
         # print("symbol index", symbolString.index(symbol))
         if symbol in "([{":
             s.push(symbol)
@@ -42,7 +42,7 @@ def parChecker(symbolString):
             else:
                 top = s.pop()
                 # print('top', top)
-                print('bottom', symbol)
+                # print('bottom', symbol)
                 # how does symbol return end lists
                 if not matches(top,symbol):
                        balanced = False

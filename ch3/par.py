@@ -138,4 +138,21 @@ def matches(open,close):
 # print(parChecker('{{([][])}()}'))
 # print(parChecker('[{()]'))
 
+# print(//2)
+
+def numtobin(input):
+  s = Stack()
+  iterate = input
+  while(iterate > 0):
+    iterate = (input//2)
+    s.push(iterate%2)
+    # s.push(iterate)
+
+
+print(1//0)
+
+
+
+
+
 

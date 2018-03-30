@@ -143,13 +143,19 @@ def matches(open,close):
 def numtobin(input):
   s = Stack()
   iterate = input
-  while(iterate > 0):
+  print('outter it', iterate)
+  while(iterate > 1):
+  # if iterate > 1:
+    # print('inner iterate', iterate)
     iterate = (input//2)
+    print('inner iterate', iterate)
     s.push(iterate%2)
     # s.push(iterate)
+  return s.lists()
+print(numtobin(42))
+# print(2)
 
-
-print(1//0)
+# print()
 
 
 

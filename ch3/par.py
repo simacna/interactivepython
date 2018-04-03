@@ -152,12 +152,23 @@ def numtobin(input):
     s.push(iterate%2)
     # s.push(iterate)
   return s.lists()
-print(numtobin(42))
+# print(numtobin(42))
 # print(2)
 
-# print()
+def divideBy2(decNumber):
+    # remstack = Stack()
+    final = []
+    rev = []
+    while decNumber > 0:
+        rem = decNumber % 2
+        final.append(rem)
+        decNumber = decNumber // 2
 
+    for x in final:
+      rev.append(x)
+    return final.reverse()
 
+print(divideBy2(42))
 
 
 

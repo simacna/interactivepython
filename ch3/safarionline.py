@@ -44,4 +44,33 @@ class Ticket:
 ticket = Ticket(42)
 # ticket.price = 41 - will throw error
 # print(ticket.price)
-print(t.price)
+# print(t.price)
+#this one wants to use 'update'
+class SubscriberOne:
+  def __init__(self, name):
+    self.name = name
+
+  def update(self, message):
+    print('{} got message "{}"'.format(self.name, message))
+
+#this one wants to use 'receive'
+class SubscriberTwo:
+  def __init__(self, name):
+    self.name = name
+  def receive(self, message):
+    print('{} got message "{}"'.format(self.name, message))
+
+
+
+class Publisher:
+  def __init__(self):
+    self.subscribers = dict()
+  def register(self, who, callback=None):
+    if callback is None: 
+      callback = who.update
+      self.subscribers[who] = callback 
+  def dispatch(self, message):
+    for callback in self.subscribers.values(): 
+      callback(message)
+  def unregister(self, who): del self.subscribers[who]
+

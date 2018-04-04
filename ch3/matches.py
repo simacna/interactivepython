@@ -57,4 +57,13 @@ def matches(open,close):
     closers = ")]}"
     return opens.index(open) == closers.index(close)
 
-print(parChecker('{{([][])}()}'))
+# print(parChecker('{{([][])}()}'))
+
+#function object
+
+def f(n): return n+2
+#f is both a function and a variable and that variable is holding a function object (can store objects in variables)
+
+# print(id(f)) -  everything has a number in python
+g = f
+print(g(3))

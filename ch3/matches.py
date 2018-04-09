@@ -66,4 +66,40 @@ def f(n): return n+2
 
 # print(id(f)) -  everything has a number in python
 g = f
-print(g(3))
+# print(g(3))
+
+nums = ['12', '7', '30', '14', '3']
+#how can you find the element with biggest numeric value? 
+#the max builtin does not help >> max(nums) => '7'
+
+def max(items):
+  biggest = items[0]
+  for item in items[1:]:
+    if int(item) > int(biggest):
+      biggest = item
+  return biggest
+# print(max(nums))
+
+#max by absolute value
+
+def max_by_abs(items):
+  biggest = items[0]
+  for item in items[1:]:
+    if abs(item) > abs(biggest):
+      biggest = item
+  return biggest
+
+def get_gpa():
+  return who["gpa"]
+
+# sorted(students, key=get_gpa)
+
+#max(), min() etc take key functions i.e. min(nums, key=int)
+
+#the above functions are very similar, how do we resolve the dilema - one line of difference
+
+"""
+if int(item) > int(biggest):
+if abs(item) > abs(biggest):
+if item["gpa"] > biggest["gpa"]:
+"""

@@ -76,4 +76,10 @@ def baseConverter(decNumber,base):
 
     return newString
 
-print(baseConverter(256,16))
+# print(baseConverter(256,16)) test
+
+
+name = 'sina'
+
+for _ in rangee(len(name)):
+    print(_)
